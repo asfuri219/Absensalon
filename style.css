@@ -1,0 +1,62 @@
+/* Gaya dasar untuk body */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f2f5; /* Warna latar belakang abu-abu muda */
+}
+
+/* Penyesuaian untuk container utama aplikasi */
+.app-container {
+    border: 1px solid #e2e8f0; /* Border tipis untuk container */
+    max-width: 90%; /* Pastikan container tidak terlalu lebar di layar besar */
+}
+
+/* Gaya kustom untuk modal (pesan pop-up) */
+.modal {
+    display: none; /* Tersembunyi secara default */
+    position: fixed; /* Tetap di tempat */
+    z-index: 1000; /* Letakkan di atas konten lain */
+    left: 0;
+    top: 0;
+    width: 100%; /* Lebar penuh */
+    height: 100%; /* Tinggi penuh */
+    overflow: auto; /* Aktifkan scroll jika konten modal terlalu panjang */
+    background-color: rgba(0,0,0,0.4); /* Latar belakang hitam transparan */
+    display: flex; /* Gunakan flexbox untuk memusatkan modal */
+    align-items: center; /* Pusatkan vertikal */
+    justify-content: center; /* Pusatkan horizontal */
+}
+.modal-content {
+    background-color: #fefefe; /* Warna latar belakang modal */
+    margin: auto; /* Memusatkan modal secara otomatis */
+    padding: 20px;
+    border-radius: 12px; /* Sudut membulat */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    max-width: 90%; /* Lebar maksimal modal */
+    width: 400px; /* Lebar standar modal */
+    text-align: center; /* Teks di tengah */
+}
+.close-button {
+    color: #aaa; /* Warna ikon tutup */
+    float: right; /* Posisikan di kanan atas */
+    font-size: 28px; /* Ukuran font ikon */
+    font-weight: bold;
+}
+.close-button:hover,
+.close-button:focus {
+    color: black; /* Warna ikon saat di-hover/fokus */
+    text-decoration: none;
+    cursor: pointer; /* Ubah kursor menjadi pointer */
+}
+
+/* Gaya untuk loading spinner */
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1); /* Border tipis spinner */
+    border-left-color: #3b82f6; /* Warna border kiri (biru) untuk animasi */
+    border-radius: 50%; /* Bentuk lingkaran */
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite; /* Animasi berputar */
+}
+@keyframes spin {
+    to { transform: rotate(360deg); } /* Putar 360 derajat */
+}
